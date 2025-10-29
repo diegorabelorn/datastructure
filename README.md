@@ -77,8 +77,11 @@ Os arquivos CSV contêm os resultados brutos e agregados do experimento.
 
 A análise dos resultados, especialmente nos gráficos, demonstra claramente a importância da complexidade algorítmica:
 
-1.  **Tempo de Execução:** O Dijkstra Clássico $(O(V^2))$ exibe um crescimento quase vertical, tornando-se inutilizável para $V \ge 5000$, enquanto os algoritmos otimizados $(O((V+E)\log V))$ mostram um crescimento muito mais suave e escalável.
-2.  **Eficiência Energética:** A pegada de carbono ($\text{CO}_2\text{e}$) espelha diretamente o tempo de execução. O custo computacional desnecessário do algoritmo $O(V^2)$ se traduz em um consumo de energia e emissão de carbono exponencialmente maior em comparação com as soluções otimizadas.
+1.  **Tempo de Execução:** O Dijkstra Clássico $(O(V^2))$ exibe um crescimento quase vertical, tornando-se inutilizável para $V \ge 5000$. O aumento de 100 vezes em $V$ (de 100 para 10000) resultou em um tempo de execução que saltou de $1.088\text{ ms}$ para $9.834$ segundos. Este comportamento é uma evidência empírica direta da sua natureza quadrática, limitando seu uso a grafos muito pequenos. 
+Por outro lado, tanto o Mini-Heap quanto o NetworkX mantiveram os tempos de execução em uma faixa gerenciável, mesmo para $V=10000$. O Mini-Heap customizado finalizou em $0.579$ segundos, enquanto o NetworkX em $1.175$ segundos.
+
+2.  **Eficiência Energética:** A pegada de carbono ($\text{CO}_2\text{e}$) espelha diretamente o tempo de execução. O custo computacional desnecessário do algoritmo $O(V^2)$, passando de $\sim 2.0 \times 10^{-8} \text{ kg}$ para $\sim 9.1 \times 10^{-5} \text{ kg}$ de $\text{CO}_2\text{e}$ em $V=10000$, se traduz em um consumo de energia e emissão de carbono exponencialmente maior em comparação com as soluções otimizadas. m $V=10000$, a solução Clássica exige $\sim 17$ vezes mais $\text{CO}_2\text{e}$ do que a solução Mini-Heap, demonstrando que a escolha do algoritmo tem um impacto mensurável na eficiência energética e na sustentabilidade do processamento de grandes volumes de dados.
+
 3.  **Referência:** A implementação do NetworkX prova ser a mais rápida, devido às otimizações de baixo nível, mas a implementação do Mini-Heap demonstra que o ganho de complexidade pode ser alcançado com estruturas de dados customizadas em Python.
 
 ---
