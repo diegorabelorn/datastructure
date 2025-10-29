@@ -85,6 +85,5 @@ Por outro lado, tanto o Mini-Heap quanto o NetworkX mantiveram os tempos de exec
 3.  **Referência:** A implementação do NetworkX prova ser a mais rápida, devido às otimizações de baixo nível, mas a implementação do Mini-Heap demonstra que o ganho de complexidade pode ser alcançado com estruturas de dados customizadas em Python.
 
 ---
-![Gráfico comparativo de Tempo de Execução do Dijkstra] (Graficos/comparacao_tempo_dijkstra_linear.png)
 
 **Desenvolvido por:** Diego Rabelo
