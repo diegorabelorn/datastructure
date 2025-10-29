@@ -87,3 +87,4 @@ Por outro lado, tanto o Mini-Heap quanto o NetworkX mantiveram os tempos de exec
 ---
 
 **Desenvolvido por:** Diego Rabelo
+**Publicação:** https://open.substack.com/pub/diegorabelos/p/do-classico-ao-sustentavel-desvendando?r=1lh0a7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
