@@ -29,7 +29,7 @@ Para garantir a robustez estatística e a validade dos resultados, foi aplicada 
 ### 2.1. Geração de Grafos
 
 * **Tamanhos (V):** O experimento foi executado em grafos com diferentes números de nós: **V = [100, 500, 1000, 5000, 10000]**.
-* **Modelo:** Os grafos foram gerados utilizando o modelo aleatório de Erdős–Rényi ($G(n, p)$) através da biblioteca `networkx`, garantindo que fossem **conectados e ponderados** (pesos inteiros entre 1 e 10).
+* **Modelo:** Os grafos foram gerados utilizando o modelo aleatório de Erdős–Rényi (G(n, p)) através da biblioteca `networkx`, garantindo que fossem **conectados e ponderados** (pesos inteiros entre 1 e 10).
 * **Arestas:** O grafo é tratado como **não-direcionado** na estrutura de lista de adjacência, refletindo a simetria de caminhos (arestas bidirecionais).
 
 ### 2.2. Robustez Estatística e Reprodutibilidade
@@ -52,7 +52,7 @@ Este repositório contém o código-fonte Python e os seguintes arquivos de dado
 
 ### 3.1. Código Fonte
 
-* `dijkstra_classic.py`, `dijkstra_miniheap.py`, etc. (Arquivos do Colab).
+* `dijkstra.ipybn`.
 
 ### 3.2. Arquivos de Dados CSV
 
@@ -77,9 +77,9 @@ Os arquivos CSV contêm os resultados brutos e agregados do experimento.
 
 A análise dos resultados, especialmente nos gráficos, demonstra claramente a importância da complexidade algorítmica:
 
-1.  **Tempo de Execução:** O Dijkstra Clássico ($O(V^2)$) exibe um crescimento quase vertical, tornando-se inutilizável para $V \ge 5000$, enquanto os algoritmos otimizados ($O((V+E)\log V)$) mostram um crescimento muito mais suave e escalável.
+1.  **Tempo de Execução:** O Dijkstra Clássico $(O(V^2))$ exibe um crescimento quase vertical, tornando-se inutilizável para $V \ge 5000$, enquanto os algoritmos otimizados $(O((V+E)\log V))$ mostram um crescimento muito mais suave e escalável.
 2.  **Eficiência Energética:** A pegada de carbono ($\text{CO}_2\text{e}$) espelha diretamente o tempo de execução. O custo computacional desnecessário do algoritmo $O(V^2)$ se traduz em um consumo de energia e emissão de carbono exponencialmente maior em comparação com as soluções otimizadas.
 3.  **Referência:** A implementação do NetworkX prova ser a mais rápida, devido às otimizações de baixo nível, mas a implementação do Mini-Heap demonstra que o ganho de complexidade pode ser alcançado com estruturas de dados customizadas em Python.
 
 ---
-**Desenvolvido por:** [Seu Nome Aqui]
+**Desenvolvido por:** Diego Rabelo
